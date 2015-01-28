@@ -1,0 +1,19 @@
+<a href='#' id=<%= song.videoId %> class='list-group-item'>
+  <% if (song.artist && song.rank) { %>
+  	<% print('#'+song.rank+' - '+song.title+' - '+song.artist) %>
+  <% } else { %>
+    <% print(song.title) %>
+  <% } %>
+
+  <table class="my-options">
+    <tr>
+      <td><a class="youtube-link" href="#"><i class="fa fa-fw fa-youtube-play"></i> <span class="youtube-link-text"></span></td></a>
+      <td class="copy-link"><i class="fa fa-fw fa-link"></i> <span class="copy-link-text"></span></a></td>
+      <td class="delete-link"><i class="fa fa-fw fa-trash-o"></i> <span class="delete-link-text"></span></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="add-to-favorites-link"><i class="fa fa-fw fa-heart"></i> <span class="favorites-text"></span></a></td>
+      <td class="replace-song-link"><i class="fa fa-fw fa-cloud-download"></i> <span class="replace-song-text"></span></td>
+    </tr>
+  </table>
+</a>

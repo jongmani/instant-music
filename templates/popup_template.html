@@ -1,0 +1,82 @@
+<div id="brand-logo-bar">
+  <div class="logo-bar-div" id="brand-logo">
+    <span id="brand-logo-text">Instant Music</span> <i class="fa fa-music"></i>
+  </div>
+  <a id="restart-button" href="#" data-toggle="modal" data-target=".restart-modal"><i class="fa fa-power-off"></i></a>
+  <div id="language-dropdown" class="dropdown">
+    <a href="#" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
+    <ul class="dropdown-menu">
+      <li class="language-button"><a id="billboard" href="#"><%= chrome.i18n.getMessage("billboardChart") %></a></li>
+      <li class="language-button"><a id="itunes" href="#"><%= chrome.i18n.getMessage("itunesChart") %></a></li>
+      <li class="language-button"><a id="melon" href="#"><%= chrome.i18n.getMessage("melonChart") %></a></li>
+      <li class="language-button"><a id="myself" href="#"><%= chrome.i18n.getMessage("favorites") %></a></li>
+    </ul>
+  </div>
+  <div id="settings-dropdown" class="dropdown">
+    <a href="#" data-toggle="dropdown"><i class="fa fa-list-ol"></i></a>
+    <ul class="dropdown-menu">
+      <li class="requested-songs-button 10-songs settings-submenu"><a href="#">10 songs</a></li>
+      <li class="requested-songs-button 25-songs settings-submenu"><a href="#">25 songs</a></li>
+      <li class="requested-songs-button 50-songs settings-submenu"><a href="#">50 songs</a></li>
+      <li class="requested-songs-button 100-songs settings-submenu"><a href="#">100 songs</a></li>
+      <li class="many-songs settings-submenu selected"><a href="#">999 songs</a></li>
+    </ul>
+  </div><!-- //end of cog settings dropdown -->
+  <div class="logo-bar-div dropdown" id="genre-logo">
+    <button id="current-genre" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Genre<span class="caret"></span></button>
+    <i id="genre-caret-down" class="fa fa-caret-down"></i>
+    <ul id="genre-container" class="dropdown-menu"></ul>
+  </div>
+</div>
+<div id="top-div">
+  <div id="music-info">
+    <div class="song-info"><img src="/static/img/loading.gif"></img></div>
+    <div class="artist-info"></div>
+  </div>
+  <div id="control-bar">
+    <a href="#"><i id="volume-button" class="control-icon fa fa-volume-up"></i></a>
+    <a href="#"><i id="volume-mute-button" class="control-icon fa fa-fw fa-volume-off"></i></a>
+    <div id="volume-slider"></div>
+    <a href="#"><i id="prev-button" class="control-icon fa fa-backward"></i></a>
+    <a href="#"><i id="play-button" class="control-icon fa fa-play"></i></a>
+    <a href="#"><i id="pause-button" class="control-icon fa fa-pause"></i></a>
+    <a href="#"><i id="next-button" class="control-icon fa fa-forward"></i></a>
+    <a href="#"><i id="loop-button" class="control-icon fa fa-refresh"></i></a>
+    <a href="#"><i id="shuffle-button" class="control-icon fa fa-random"></i></a>
+  </div>
+
+  <div id="status-bar" class="progress">
+    <div class="progress-bar"></div>
+  </div>
+  <div id="info-bar"></div>
+
+  <!-- app restart modal -->
+  <div class="modal fade restart-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"><%= chrome.i18n.getMessage("restart_msg") %></h4>
+        </div>
+        <div class="restart-modal-buttons">
+          <button type="button" id="restart-yes" class="btn btn-primary"><%= chrome.i18n.getMessage("yes") %></button>
+          <button type="button" id="restart-no" class="btn btn-default" data-dismiss="modal"><%= chrome.i18n.getMessage("no") %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //app restart modal -->
+
+</div>
+<div id="bottom-div">
+  <div id="elapsed-time">0:00</div>
+  <div class="slider"></div>
+  <div id="ending-time">0:00</div>
+  <a href="#">
+    <i id="caret-down" class="fa fa-caret-down"></i>
+  </a>
+</div> <!-- //end of bottom container -->
+  <div id="expanded-container">
+    <div id="song-search-form-group" class="form-group"></div>
+    <div class="playlist-songs"></div>
+  </div> <!-- //end of expanded container -->
