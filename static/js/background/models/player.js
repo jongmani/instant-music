@@ -14,10 +14,9 @@ define([
       var self = this;
       window.Playlist = new PlaylistModel();
 
-      var extensionId = chrome.i18n.getMessage('@@extension_id');
-      var addedParam = '*?enablejsapi=1&origin=chrome-extension:\\' + extensionId;
+      var addedParam = '?enablejsapi=1&origin=chrome-extension:\\' + chrome.runtime.id;
       var filter = { 
-        urls: ['https://www.youtube.com/embed/'+addedParam, '*://*.youtube.com/embed/'+addedParam]
+        urls: ['*://*.youtube.com/embed/*'+addedParam]
       };
       var optParam = ['blocking', 'requestHeaders'];
 
@@ -31,14 +30,10 @@ define([
       chrome.webRequest.onBeforeSendHeaders.addListener(function (req) {
         var customurl = req.url.substring(0, req.url.indexOf('/embed/'));
         var customRefererObject = { name: 'Referer', value: customurl };
-        var customUserAgent = 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A403 Safari/8536.25';
         var isRefererPresent;
         $.grep(req.requestHeaders, function (headers) {
           if (headers.name == 'Referer') {
             headers.value = customurl;
-          }
-          if (headers.name == 'User-Agent') {
-            headers.value = customUserAgent;
           }
         });
         if (!isRefererPresent) {
@@ -49,7 +44,6 @@ define([
 
 
       window.onYouTubeIframeAPIReady = function() {
-        //console.log("onYouTubeIframeAPIReady");
         self.set('player', self.YoutubePlayer('myframe')); // FIXME: might have to get rid of 'new' keyword
         YT.Player.prototype.playNextSong = function() {
           var nextSong = window.Playlist.getNextSong();
