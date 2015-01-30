@@ -9,7 +9,7 @@ Instant Music is a chrome extension that lets you listen to mainstream music in 
 " target="_blank"><img src="http://i.imgur.com/wZJaUzp.png" 
 alt="Instant Music" width="600" height="400" /></a></div>
 
-Download: (Chrome Webstore)[https://chrome.google.com/webstore/detail/instant-music/ehebnoicojclpjjblbacdjmpjpkocmml]
+Download: [Chrome Webstore](https://chrome.google.com/webstore/detail/instant-music/ehebnoicojclpjjblbacdjmpjpkocmml)
 
 Contributing
 ============
@@ -29,15 +29,36 @@ Setting up development environment
 -------------
 1. Fork this repository.
 2. In your favorite directory, clone the forked repo
-```sh
-$ git clone https://github.com/[your_github_handle]/instant-music.git
-```
+
+  ```sh
+  $ git clone https://github.com/[your_github_handle]/instant-music.git
+  ```
+
 3. If you find a bug, [post it as an issue](https://github.com/woniesong92/instant-music/issues/new). You can work on any of the existing issues too.
 4. Fix the bug. When you think you have fixed the bug, run manual tests until you are confident that your patch works. Then commit it and push it to your repo.
-```sh
-$ git add .
-$ git commit -m 'fixed bug for the issue #32'
-$ git push origin master
-```
+
+  ```sh
+  $ git add .
+  $ git commit -m 'fixed bug for the issue #32'
+  $ git push origin master
+  ```
+
 5. Go to your forked repository and submit a pull request.
 6. The pull request goes under review and when everything seems suitable, it will be deployed.
+
+Useful guides
+-------
+* [Contributing to open-source projects](https://guides.github.com/activities/contributing-to-open-source/)
+* [Chrome extension developer guide](https://developer.chrome.com/extensions)
+
+Credits
+============
+* [Lab80](http://lab80.co/): For everything
+* [Sean Anderson](https://streamus.com/#about): For insipiration
+* [Hun Choi @ Microsoft]: For providing BizSpark package to host Instant Music
+* Jun Hyun Park: For translating Instant Music into Japanese
+* [Coding everybody group](https://www.facebook.com/groups/codingeverybody/): For initial introduction
+
+License
+=========
+Instant Music is under MIT License.
