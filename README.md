@@ -6,7 +6,7 @@ What is Instant Music?
 Instant Music is a chrome extension that lets you listen to mainstream music in your favorite genre without having to open another heavy music player. You don't even need to come up with your own playlist because Instant Music automatically pulls famous music charts from iTunes, BillBoard, and Melon, and plays songs using YouTube videos as source. If there is any song you wish to play, you can search for it by the song's title and the artist's name, and watch it appears in your playlist instantly. And yes, of course you can create your own playlists too.
 
 <div style="text-align:center"><a href="https://www.youtube.com/watch?v=CNTgTXFrTuY
-" target="_blank"><img src="http://i.imgur.com/wZJaUzp.png" 
+" target="_blank"><img src="http://i.imgur.com/kttg6fJ.png" 
 alt="Instant Music" width="600" height="400" /></a></div>
 
 Download: [Chrome Webstore](https://chrome.google.com/webstore/detail/instant-music/ehebnoicojclpjjblbacdjmpjpkocmml)
@@ -57,7 +57,7 @@ Credits
 * [Sean Anderson](https://streamus.com/#about): For insipiration
 * [Hun Choi @ Microsoft]: For providing BizSpark package to host Instant Music
 * Jun Hyun Park: For translating Instant Music into Japanese
-* [Coding everybody group](https://www.facebook.com/groups/codingeverybody/): For initial introduction
+* [Coding everybody group](https://www.facebook.com/groups/codingeverybody/): Where Instant Music was first released to public
 
 License
 =========
