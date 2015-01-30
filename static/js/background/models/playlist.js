@@ -24,11 +24,11 @@ define([
     billboardChart: {
       source: "billboard",
       chart: [
-        {genre: chrome.i18n.getMessage("pop"), url: 'http://www1.billboard.com/rss/charts/hot-100'},
-        {genre: chrome.i18n.getMessage("rap"), url: "http://www1.billboard.com/rss/charts/rap-song"},
-        {genre: chrome.i18n.getMessage("electronic"), url: "http://www1.billboard.com/rss/charts/dance-electronic-songs"},
-        {genre: chrome.i18n.getMessage("club"), url: "http://www1.billboard.com/rss/charts/dance-club-play-songs"},
-        {genre: chrome.i18n.getMessage("rock"), url: "http://www1.billboard.com/rss/charts/rock-songs"},
+        {genre: chrome.i18n.getMessage("pop"), url: 'http://www.billboard.com/rss/charts/hot-100'},
+        {genre: chrome.i18n.getMessage("rap"), url: "http://www.billboard.com/rss/charts/rap-song"},
+        {genre: chrome.i18n.getMessage("electronic"), url: "http://www.billboard.com/rss/charts/dance-electronic-songs"},
+        {genre: chrome.i18n.getMessage("club"), url: "http://www.billboard.com/rss/charts/dance-club-play-songs"},
+        {genre: chrome.i18n.getMessage("rock"), url: "http://www.billboard.com/rss/charts/rock-songs"},
       ]
     },
     itunesChart: {
