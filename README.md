@@ -34,8 +34,9 @@ Setting up development environment
   $ git clone https://github.com/[your_github_handle]/instant-music.git
   ```
 
-3. If you find a bug, [post it as an issue](https://github.com/woniesong92/instant-music/issues/new). You can work on any of the existing issues too.
-4. Fix the bug. When you think you have fixed the bug, run manual tests until you are confident that your patch works. Then commit it and push it to your repo.
+3. To load the extension locally, go to chrome://extensions and turn on the developer mode. Click "Load unpacked extension" and choose the directory you cloned the repo to.
+4. If you find a bug, [post it as an issue](https://github.com/woniesong92/instant-music/issues/new). You can work on any of the existing issues too.
+5. Fix the bug. When you think you have fixed the bug, run manual tests until you are confident that your patch works. Then commit it and push it to your repo.
 
   ```sh
   $ git add .
@@ -43,19 +44,19 @@ Setting up development environment
   $ git push origin master
   ```
 
-5. Go to your forked repository and submit a pull request.
-6. The pull request goes under review and when everything seems suitable, it will be deployed.
+6. Go to your forked repository and submit a pull request.
+7. The pull request goes under review and when everything seems suitable, it will be deployed.
 
 Useful guides
 -------
-* [Contributing to open-source projects](https://guides.github.com/activities/contributing-to-open-source/)
 * [Chrome extension developer guide](https://developer.chrome.com/extensions)
+* [Contributing to open-source projects](https://guides.github.com/activities/contributing-to-open-source/)
 
 Credits
 ============
 * [Lab80](http://lab80.co/): For everything
 * [Sean Anderson](https://streamus.com/#about): For insipiration
-* [Hun Choi @ Microsoft]: For providing BizSpark package to host Instant Music
+* Hun Choi @ Microsoft: For providing BizSpark package to host Instant Music
 * Jun Hyun Park: For translating Instant Music into Japanese
 * [Coding everybody group](https://www.facebook.com/groups/codingeverybody/): Where Instant Music was first released to public
 
