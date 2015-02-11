@@ -14,7 +14,7 @@ define([
       var self = this;
       window.Playlist = new PlaylistModel();
 
-      var addedParam = '?enablejsapi=1&origin=chrome-extension:\\' + chrome.runtime.id;
+      var addedParam = '?enablejsapi=1&origin=chrome-extension://' + chrome.runtime.id;
       var filter = { 
         urls: ['*://*.youtube.com/embed/*'+addedParam]
       };
