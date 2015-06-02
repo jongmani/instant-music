@@ -113,9 +113,21 @@ i.fa-cog, i.fa-power-off {
 	color: #3498DB;
 }
 
+#login-button {
+	position: absolute;
+	right: 193px;
+	/*display: none;*/
+}
+
+#save-button {
+	position: absolute;
+	right: 173px;
+	display: none;
+}
+
 #restart-button {
 	position: absolute;
-	right: 155px;
+	right: 150px;
 }
 
 #settings-dropdown.dropdown.open ul.dropdown-menu {

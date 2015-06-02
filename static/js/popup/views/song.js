@@ -37,8 +37,6 @@ define([
     },
 
     playSelectedSong: function(e) {
-      debugger;
-      console.log("wtf?")
       var bg = chrome.extension.getBackgroundPage();
       // Left click on options menu (User right clicks, and THEN chooses an option)
       if (e.which == 1) {
@@ -86,7 +84,7 @@ define([
 
         // *NOTE: It is possible to add "Download Song" if
         // it is not against policy
-        debugger
+        
         bg.Playlist.set('currentSong', this.model);
         bg.playerWrapper.get('player').loadVideoById(this.model.get('videoId'));
       }

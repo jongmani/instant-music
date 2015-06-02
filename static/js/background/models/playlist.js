@@ -11,14 +11,14 @@ define([
     melonChart: {
       source: "melon",
       chart: [
-        {genre: chrome.i18n.getMessage("k_pop_trending"), url: "http://api.instantmusicapp.com/charts/realtime?version=1&page=1&count="},
-        {genre: chrome.i18n.getMessage("k_pop_new"), url: "http://api.instantmusicapp.com/newreleases/songs?version=1&page=1&count="},
-        {genre: chrome.i18n.getMessage("k_pop_ost"), url: "http://api.instantmusicapp.com/charts/topgenres/DP0300?version=1&page=1&count="},
-        {genre: chrome.i18n.getMessage("pop_trending"), url: "http://api.instantmusicapp.com/charts/topgenres/DP0200?version=1&page=1&count="},
-        {genre: chrome.i18n.getMessage("j_pop_trending"), url: "http://api.instantmusicapp.com/charts/topgenres/DP0400?version=1&page=1&count="},
-        {genre: chrome.i18n.getMessage("classic"), url: "http://api.instantmusicapp.com/charts/topgenres/DP0500?version=1&page=1&count="},
-        {genre: chrome.i18n.getMessage("newage"), url: "http://api.instantmusicapp.com/charts/topgenres/DP0800?version=1&page=1&count="},
-        {genre: chrome.i18n.getMessage("jazz"), url: "http://api.instantmusicapp.com/charts/topgenres/DP0900?version=1&page=1&count="},
+        {genre: chrome.i18n.getMessage("k_pop_trending"), url: "http://instantmusic.cloudapp.net/charts/realtime?version=1&page=1&count="},
+        {genre: chrome.i18n.getMessage("k_pop_new"), url: "http://instantmusic.cloudapp.net/newreleases/songs?version=1&page=1&count="},
+        {genre: chrome.i18n.getMessage("k_pop_ost"), url: "http://instantmusic.cloudapp.net/charts/topgenres/DP0300?version=1&page=1&count="},
+        {genre: chrome.i18n.getMessage("pop_trending"), url: "http://instantmusic.cloudapp.net/charts/topgenres/DP0200?version=1&page=1&count="},
+        {genre: chrome.i18n.getMessage("j_pop_trending"), url: "http://instantmusic.cloudapp.net/charts/topgenres/DP0400?version=1&page=1&count="},
+        {genre: chrome.i18n.getMessage("classic"), url: "http://instantmusic.cloudapp.net/charts/topgenres/DP0500?version=1&page=1&count="},
+        {genre: chrome.i18n.getMessage("newage"), url: "http://instantmusic.cloudapp.net/charts/topgenres/DP0800?version=1&page=1&count="},
+        {genre: chrome.i18n.getMessage("jazz"), url: "http://instantmusic.cloudapp.net/charts/topgenres/DP0900?version=1&page=1&count="},
       ]
     },
     billboardChart: {
@@ -308,6 +308,19 @@ define([
         this.set('musicChart', window.AVAILABLE_CHARTS.myChart);
       }
     },
+
+    startSync: function(songInfos) {
+      var that = this;
+      $.each(songInfos, function(idx, songInfo) {
+        var song = new Song({
+          title: songInfo.title,
+          videoId: songInfo.videoId
+        });
+        that.get('songs').add(song);
+        song.save(); 
+      });
+    },
+
   });
   return Playlist;
 });

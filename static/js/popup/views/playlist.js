@@ -8,8 +8,6 @@ define([
     el: '#expanded-container',
 
     initialize: function() {
-      console.log("playlist view: init")
-      console.log("im working?")
       var playlistModel = this.model;
       var bg = chrome.extension.getBackgroundPage();
 

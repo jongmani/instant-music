@@ -30,7 +30,9 @@ define([
       'click #itunes': 'changePlaylist',
       'click #myself': 'setupPersonalPlaylist',
       'click #open-favorites': 'setupPersonalPlaylist',
-      'click #restart-yes': 'refreshApp'
+      'click #restart-yes': 'refreshApp',
+      'click #save-button': 'callSaveRemotePlaylist',
+      'click #login-button': 'callGetRemotePlaylist'
     },
 
     // Everytime a popup is opened, the view should gather information
@@ -78,6 +80,13 @@ define([
       // Highlight appropriate music charts
       var musicChartSource = Playlist.get('musicChart').source;
       $('#'+musicChartSource).parent().addClass('selected');
+
+      // Show save button if I am looking ay my favorites playlist
+      if (musicChartSource == 'myself') {
+        $('#save-button').show();
+      } else {
+        $('#save-button').hide();
+      }
 
       // Populate genre options on top right
       // FIXME: should be refactored
@@ -429,6 +438,7 @@ define([
         Playlist.setMusicChart(chartName); // this is different from setting an attribute
       }
 
+      $('#save-button').hide();
       this.populateGenres("musicChartChanged");
       this.loadNewSongs("calledFromChangePlayList")
     },
@@ -440,12 +450,11 @@ define([
       Playlist.setMusicChart();
       this.populateGenres("musicChartChanged");
       Playlist.get('songs').reset();
-
-      //this.playlistView.initialize();
       
       this.playlistView.renderSongs();
       $('li.requested-songs-button').hide();
       $('li.many-songs').show();
+      $('#save-button').show();
       this.setProgress(100); // FIXME: this should be called automatically by views that watch models
     },
 
@@ -458,6 +467,23 @@ define([
     refreshApp: function() {
       window.close();
       chrome.runtime.reload();
+    },
+
+    callSaveRemotePlaylist: function() {
+      var songsArr = _.map(Playlist.get('songs').toJSON(), function(song) {
+        return {'videoId': song.videoId, 'title': song.title};
+      });
+
+      // var songsArr = _.pluck(Playlist.get('songs').toJSON(), 'videoId');
+      
+      this.model.saveRemotePlaylist(songsArr);
+    },
+
+    callGetRemotePlaylist: function() {
+      var owner = "woniesong92@cornell.edu";
+      this.model.getRemotePlaylist(owner, function(videoIds){
+        Playlist.startSync(videoIds);
+      });
     }
   });
 
