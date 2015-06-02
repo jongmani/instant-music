@@ -7,7 +7,8 @@
   "version": "0.302",
 
   "permissions": [
-    "tabs", "webRequest", "notifications", "webRequestBlocking", "clipboardWrite",
+    "tabs", "webRequest", "notifications", "webRequestBlocking",
+    "clipboardWrite", "identity",
     "http://www.youtube.com/*", "https://www.youtube.com/*", 
     "http://www.billboard.com/rss/charts/*", "http://www1.billboard.com/rss/charts/*",
     "https://www.youtube.com/embed/*", "https://www.googleapis.com/youtube/v3/*",
@@ -57,6 +58,14 @@
 
   "background": {
     "page": "templates/background.html"
+  },
+
+  "oauth2": {
+      "client_id": "117587992890-0ghlknodgg10ievi58gjqjjitfgucqq3.apps.googleusercontent.com",
+      "scopes": [
+        // "identity.email"
+        "https://www.googleapis.com/auth/userinfo.email"
+      ]   
   },
 
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://s.ytimg.com/yts/jsbin/ https://www.youtube.com/ https://ssl.google-analytics.com/ http://localhost; object-src 'self'"

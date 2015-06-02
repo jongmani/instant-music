@@ -227,7 +227,7 @@ define([
               videoId: videoId
             });
 
-            console.log(title, videoId);
+            // console.log(title, videoId);
             
             // Insert songs into the playlist in the order of their ranks
             // *Note: Songs that do not exist on YouTube are ignored
@@ -311,6 +311,12 @@ define([
 
     startSync: function(songInfos) {
       var that = this;
+      // empty the current playlist first
+      _.chain(that.get('songs').models).clone().each(function(model){
+        console.log(model);
+        model.destroy();
+      });
+
       $.each(songInfos, function(idx, songInfo) {
         var song = new Song({
           title: songInfo.title,

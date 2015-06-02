@@ -480,8 +480,9 @@ define([
     },
 
     callGetRemotePlaylist: function() {
-      var owner = "woniesong92@cornell.edu";
-      this.model.getRemotePlaylist(owner, function(videoIds){
+      var that = this;
+      this.model.getRemotePlaylist(function(videoIds){
+        that.playlistView.clearSongs();
         Playlist.startSync(videoIds);
       });
     }

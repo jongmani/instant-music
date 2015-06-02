@@ -114,7 +114,13 @@ define([
     },
 
     clearFavorites: function() {
+      // deprecated?
       localStorage.clear();
+    },
+
+    clearSongs: function() {
+      // clear song views
+      this.$('.playlist-songs').empty();
     }
   });
 
