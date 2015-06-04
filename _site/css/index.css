@@ -1,0 +1,155 @@
+.container-fluid {
+  padding: 0;
+}
+
+.main-content-wrapper {
+  padding-top: 40px;
+}
+
+.top-bar {
+  height: 5px;
+  background-color: #3498DB;
+}
+
+.top-marketing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  text-align: center;
+  /*font-family: Moon;*/
+}
+
+.top-marketing .bigger {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.top-marketing .smaller {
+  font-size: 20px;
+  font-family: MoonBold;
+}
+
+.main-img-wrapper {
+  height: 300px;
+  text-align: center;
+}
+
+.main-img-wrapper img {
+  width: 50%;
+  max-height: 100%;
+}
+
+.big-title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: #34495e;
+}
+
+.explanation {
+  font-size: 25px;
+  font-weight: bold;
+  color: #95A5A6;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.social-buttons {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.twitter-share-button {
+  margin-left: 10px;
+}
+
+.google-button {
+  margin-left: 10px;
+}
+
+.btn-btm {
+  height: 50px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.donation-container {
+  margin-top: 10px;
+}
+
+.donate-btn {
+  background-color: #1abc9c;
+  border-color: white;
+}
+
+.donate-btn:active {
+   background-color: #1abc9c; 
+   border-color: white; 
+}
+
+.donate-btn:hover {
+  background-color: #16a085;
+  border-color: white;
+}
+
+.hi-author {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.donation-selects {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.donation-selects .donation {
+  padding: 10px;
+  height: 50px;
+  width: 100px;
+  /*background-color: red;*/
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+.ask {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.donation-selects {
+  padding-bottom: 20px;
+}
+
+.thanks {
+  color: #95A5A6;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.more-img-container {
+  width: 100%;
+  margin-top: 100px; /* FIXME: should be absolutely positioned */;
+  height: 150px;
+  text-align: right;
+}
+
+.more-img-container img {
+  width: 150px;
+  max-height: 100%;
+  margin-left: 50px;
+}
+
+.more-img-container img.chrome-webstore-img {
+  width: 200px;
+}
+
+.contact {
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: right;
+}

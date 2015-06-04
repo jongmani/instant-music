@@ -1,0 +1,116 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ '/css/index.css' | prepend: site.baseurl }}">
+
+<div class="container-fluid">
+  <div class="row-fluid">
+
+    <div class="col-md-12 top-bar"></div>
+
+    <div class="main-content-wrapper">
+      <div class="col-md-6 left-column">
+        <div class="im-container">
+          <div class="main-img-wrapper">
+            <img src="{{ '/public/images/headphone.svg' | prepend: site.baseurl }}">
+          </div>
+          <div class="big-title">
+            Instant Music
+          </div>
+          <div class="explanation">
+            Listen To The Latest Music For Free
+          </div>
+        </div>
+        <div class="social-buttons">
+          <div class="fb-like" data-href="https://www.facebook.com/instantmusicapp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="https://chrome.google.com/webstore/detail/instant-music/ehebnoicojclpjjblbacdjmpjpkocmml">Tweet</a>
+          <span class="google-button">
+            <div class="g-plusone" data-size="medium" data-href="https://chrome.google.com/webstore/detail/instant-music/ehebnoicojclpjjblbacdjmpjpkocmml"></span>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="col-md-6 right-column">
+        <div class="donation-container">
+          <div class="donation-start">
+            <div class="hi-author">Hello, I am the developer.</div>
+            <div class="ask">Instant Music has served many thousands of users for over a year completely free of charge. Your <i>love</i> is really what drives me to continue the service and deliver new features. However, it does require a lot of resources to maintain and improve Instant Music, and it is impossible to sustain it by myself. Please consider contributing to making Instant Music a better service for all of us.
+            </div>
+          </div>
+          <div class="donation-inner-container">
+            <div class="donation-selects">
+              <span class="donation donation-100">
+                <input type='radio' name='donate' value='100'> $100
+              </span>
+              <span class="donation donation-10">
+                <input type='radio' name='donate' value='10'> $10
+              </span>
+              <span class="donation donation-5">
+                <input type='radio' name='donate' value='5' checked> $5
+              </span>
+              <span class="donation donation-2">
+                <input type='radio' name='donate' value='2'> $2
+              </span>
+            </div>
+            <div class="paypal-donate">
+              <form class='paypal-form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_donations">
+              <input type="hidden" name="business" value="X3EUZALS666NA">
+              <input type="hidden" name="lc" value="US">
+              <input type="hidden" name="item_name" value="Instant Music">
+              <input type="hidden" name="item_number" value="woniesong92@gmail.com">
+              <input class='donate-amount' type="hidden" name="amount" value="2">
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="hidden" name="no_note" value="0">
+              <input type="hidden" name="cn" value="Say anything to Instant Music developer:">
+              <input type="hidden" name="no_shipping" value="1">
+              <input type="hidden" name="rm" value="1">
+              <input type="hidden" name="return" value="https://chrome.google.com/webstore/detail/instant-music/ehebnoicojclpjjblbacdjmpjpkocmml">
+              <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+              <button class="btn btn-block btn-primary btn-btm donate-btn" type="submit">Donate with <strong>PayPal</strong>
+              </form>
+            </div>
+            <a href="https://chrome.google.com/webstore/detail/instant-music/ehebnoicojclpjjblbacdjmpjpkocmml"class="btn btn-primary btn-block download-btn btn-btm">
+              크롬 웹스토어에서 설치하기
+            </a>
+          </div>
+          <div class='contact'>
+            문의사항이 있으세요?
+            <a href='mailto:woniesong92@gmail.com'><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a>
+
+          </div>
+
+          <div class="more-img-container">
+            <img class='youtube-img' src="{{ '/public/images/youtube.png' | prepend: site.baseurl }}">
+            <img class='chrome-webstore-img' src="{{ '/public/images/chrome-webstore.png' | prepend: site.baseurl }}">
+    <!--         <img src="{{ '/public/images/billboard.png' | prepend: site.baseurl }}">
+            <img src="{{ '/public/images/itunes.png' | prepend: site.baseurl }}">
+            <img src="{{ '/public/images/melon.png' | prepend: site.baseurl }}"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-md-12 bottom-bar"></div> -->
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=366645616794230&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

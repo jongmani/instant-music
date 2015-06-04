@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: BikoBold;
+  src: url("/public/fonts/Biko_Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: BikoRegular;
+  src: url("/public/fonts/Biko_Regular.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: MoonBold;
+  src: url("/public/fonts/Moon-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Moon;
+  src: url("/public/fonts/Moon.otf") format("opentype");
+  font-weight: bold;
+}
+
