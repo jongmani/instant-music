@@ -1,7 +1,7 @@
 # Site settings
 title: Instant Music
 description: "Instant Music is the most convenient way to listen to the latest music on Chrome browser."
-baseurl: ""
+baseurl: "instant-music/"
 url: "http://yourdomain.com"
 
 # Build settings
