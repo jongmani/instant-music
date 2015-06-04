@@ -3,8 +3,8 @@
   <channel>
     <title>Instant Music</title>
     <description>Instant Music is the most convenient way to listen to the latest music on Chrome browser.</description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>/instant-music/</link>
+    <atom:link href="/instant-music/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Welcome to Jekyll!</title>
@@ -23,8 +23,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 
 </description>
         <pubDate>Wed, 03 Jun 2015 14:09:37 -0700</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/06/03/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/06/03/welcome-to-jekyll/</guid>
+        <link>/instant-music/jekyll/update/2015/06/03/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">/instant-music/jekyll/update/2015/06/03/welcome-to-jekyll/</guid>
       </item>
     
   </channel>
